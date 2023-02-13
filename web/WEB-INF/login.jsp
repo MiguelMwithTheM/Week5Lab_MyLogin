@@ -19,7 +19,7 @@
         <h1>Login</h1>
         
         <%--Form--%>
-        <form name="logForm">
+        <form name="logForm" method="post">
             Username: <input type="text" name="uInput" value="${uInput}"> <br>
             Password: <input type="text" name="pInput" value="${pInput}"> <br>
             <input type="submit" name="submit" value="Log in">

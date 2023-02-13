@@ -21,6 +21,16 @@ public class AccountService {
         this.password = newPassword;
     }
     
+    //Methods
+    public AccountService login(String newUsername, String newPassword){
+        if(newUsername.equals("abe") || newUsername.equals("barb") && newPassword.equals("password")) {
+            AccountService acc = new AccountService(newUsername, newPassword);
+            return acc;
+        } else {
+            return null;
+        }
+    }
+    
     //Getters
     public String getUsername() {
         return username;
