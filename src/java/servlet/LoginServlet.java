@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.AccountService;
 
 /**
  *
@@ -34,7 +35,14 @@ public class LoginServlet extends HttpServlet {
         String pData = request.getParameter("pInput");
         
         if(uData != "" && pData != ""){
-            
+            if(AccountService.login(uData,pData) != null){
+                session.setAttribute("uInput", uData);              
+            } else {
+                request.setAttribute("message", "Invalid login");
+                request.setAttribute("uInput", uData);
+                request.setAttribute("pInput", pData);
+                getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+            }
         }
 
         getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);

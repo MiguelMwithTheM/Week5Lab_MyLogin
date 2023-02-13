@@ -22,7 +22,7 @@ public class AccountService {
     }
     
     //Methods
-    public AccountService login(String newUsername, String newPassword){
+    public static AccountService login(String newUsername, String newPassword){
         if(newUsername.equals("abe") || newUsername.equals("barb") && newPassword.equals("password")) {
             AccountService acc = new AccountService(newUsername, newPassword);
             return acc;
