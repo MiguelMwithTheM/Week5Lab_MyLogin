@@ -7,11 +7,26 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login Page</title>
     </head>
+    
     <body>
-        <h1>Hello World!</h1>
+        
+        <%--Title--%>
+        <h1>Login</h1>
+        
+        <%--Form--%>
+        <form name="logForm">
+            Username: <input type="text" name="uInput" value="${uInput}"> <br>
+            Password: <input type="text" name="pInput" value="${pInput}"> <br>
+            <input type="submit" name="submit" value="Log in">
+        </form>
+        
+        <%--Message--%>
+        <p>${message}</p>
+        
     </body>
 </html>

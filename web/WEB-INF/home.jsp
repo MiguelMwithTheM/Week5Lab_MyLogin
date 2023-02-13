@@ -7,11 +7,22 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Home Page</title>
     </head>
+    
     <body>
-        <h1>Hello World!</h1>
+        
+        <%--Title--%>
+        <h1>Home Page</h1>
+        
+        <%--Content--%>
+        <p>Hello ${AccountService.username}</p>
+        
+        <%--Logout--%>
+        <a href="login">Log out</a>
+        
     </body>
 </html>

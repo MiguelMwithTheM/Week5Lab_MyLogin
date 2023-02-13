@@ -7,5 +7,35 @@ package model;
  * @author migue
  */
 public class AccountService {
+    private String username;
+    private String password;
     
+    //Constructors
+    public AccountService(){
+        username = "";
+        password = "";
+    }
+    
+    public AccountService(String newUsername, String newPassword){
+        this.username = newUsername;
+        this.password = newPassword;
+    }
+    
+    //Getters
+    public String getUsername() {
+        return username;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+    
+    //Setters
+    public void setUsername(String newUsername) {
+        this.username = newUsername;
+    }
+    
+    public void setPassword(String newPassword) {
+        this.password = newPassword;
+    }
 }
